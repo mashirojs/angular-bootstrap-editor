@@ -1,0 +1,20 @@
+<div #container class="canvas-container">
+  <iframe
+    #canvas
+    class="canvas"
+    src="/assets/canvas.html"
+    (load)="frameOnLoad()"
+  ></iframe>
+  <div
+    #wrap
+    class="canvas-wrap"
+    (dragover)="dndEvents.dragOver($event)"
+    (drop)="dndEvents.drop($event)"
+  >
+    <div
+      #spacer
+      class="canvas-spacer"
+      [ngStyle]="spacerStyle"
+    ></div>
+  </div>
+</div>
